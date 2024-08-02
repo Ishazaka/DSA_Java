@@ -53,6 +53,28 @@ Pop and push also runs on O(1) because we can easily add or remove last item in 
 
  - - - - - - - - - - - - 
 
+## Queues:
+Queue follow FIFO(first in first out) principle where what ever is entered first in queue that is processed first, 
+A queue is a linear data structure where elements are stored in the FIFO (First In First Out) principle where the first element inserted would be the first element to be accessed. A queue is an Abstract Data Type (ADT) similar to stack, the thing that makes queue different from stack is that a queue is open at both its ends. The data is inserted into the queue through one end and deleted from it using the other end. Queue is very frequently used in most programming languages.
+Queue uses two pointers − front and rear
 
+#### Application software queues are 
+Printer
+Operating systems
+Live Support System
+Web servers
+Wherever we process a jobs based on order we received them. 
+
+
+#### Operations:
+Enqueue: adding an item to the back of the queue
+Dequeue: moving an item at the front of the queue
+Peek : for getting the item at the front without removing it
+isEmpty: 
+isFull
+
+These are operations take O(1) constant time because items are added or removed from the end so it is fast.
+
+ - - - - - - - - - - - 
 
   
