@@ -20,13 +20,13 @@ We don’t have index in linked list because the values are stored all over the 
 3- In the middle: First we have to find a node which in O(n) operation and then delete the node which is O(1) operation, which means mainly its O(n) operations.
 
 ### 4- Deleting Elements:
-1- From the Beginning: O(1) operation
+#### 1- From the Beginning: O(1) operation
   Deleting from the beginning is so fast, set the Head from the first node to the 2nd node - so mainly its a O(1) operation (we should also remove the link to the first node, because if we will not remove it the garbage collector will think, it is still in use so it will not remove the node)
 
-### 2- From the End: O(n) operation.
+#### 2- From the End: O(n) operation.
  Its little tricky, we have tail at last node, but it don’t have address fro the previous node, so to reach out to the node which is before the last node, we have to traverse all the linked list till 2nd last node and then move the tail to the 2nd last node and remove the link also- so we have to traverse the linked list it is O(n) operation.
 
-### 3- From the Middle: O(n) operation.
+#### 3- From the Middle: O(n) operation.
   so first we have to traverse all the values to find the desired node, then just change the reference of previous node to the next node of desired value. For example we want to remove the 3rd item, then we just have to change the address stored in 2nd item and store the address of 4th item and also remove the link of third node. In this way, it will be removed by garbage collector from the memory. - It is O(n) operation.
 
   - - - - - - - - - - - - - - - - 
