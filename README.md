@@ -30,3 +30,29 @@ We don’t have index in linked list because the values are stored all over the 
   so first we have to traverse all the values to find the desired node, then just change the reference of previous node to the next node of desired value. For example we want to remove the 3rd item, then we just have to change the address stored in 2nd item and store the address of 4th item and also remove the link of third node. In this way, it will be removed by garbage collector from the memory. - It is O(n) operation.
 
   - - - - - - - - - - - - - - - - 
+
+
+## Stack :
+A Stack is a linear data structure that holds a linear, ordered sequence of elements. It follows LIFO principles, first in last out , the element that was inserted last will be removed first.
+
+### Implementation:
+1- It implement the undo feature
+2- Build compilers (e.g. syntax checking)
+3-  Evaluate expression (eg 1 + 2  * 3 ) 
+4- Build navigation (eg forward/back) (web browser and apps has forward and back button to go previous or forward pages)
+
+### Stack operations:
+push(item) => which push/insert the item on the top
+Pop() =>  removes the item from the top
+Peek() => returns the top item with our removing it from the stack
+isEmpty() => 
+
+### Run time complexity:
+Isempty and peek operation run with O(1)
+Pop and push also runs on O(1) because we can easily add or remove last item in linked list and in Array.
+
+ - - - - - - - - - - - - 
+
+
+
+  
