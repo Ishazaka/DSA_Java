@@ -78,3 +78,32 @@ These are operations take O(1) constant time because items are added or removed 
  - - - - - - - - - - - 
 
   
+### Hash Tables
+
+Internally Hash tables use array to store an object, 
+
+Applications of Hash tables
+1- spell Checkers
+2- Dictionaries
+3-  Compilers
+4-  Code Editors
+
+We are using Hash Tables with different name
+Hash maps in Java
+Object in Javascript
+Dictionary in python
+Dictionary in C#
+
+In JavaScript, there are several ways to implement hash tables 
+* Objects: Objects in JavaScript can be used as simple hash tables. However, they have some limitations, such as potential key collisions with built-in properties and the inability to store non-string keys efficiently.
+* Maps: The Map object is a more robust implementation of hash tables in JavaScript. It allows any data type as keys and maintains the insertion order.
+
+### Operations:
+insert()
+lookup()
+delete() 
+
+#### Run time complexity:
+All have O(1) constant time, because hash function tell us where we should store the  object or lookup in the memory so we don’t have to go through all the items. 
+
+ - - - - - - - - - - - 
