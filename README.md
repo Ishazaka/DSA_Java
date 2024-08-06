@@ -4,10 +4,10 @@
 Array to store list of numbers, strings or any items         
 It is linear data structure and store in sequential manner in memory, and can get by index number.     
 
-Static Array: java has static array,       
+### Static Array: java has static array,       
 Dynamic Array: by default, javascript has dynamic array, in java its vector and Arraylist, vector grow 100% and array list grow 50% means if you create a new array using vector, 4 previous and 4 new space(8 total), so it will be double than previous array. And array list will add 2 more (total 6)      
 
-Time Complexity:
+### Time Complexity:      
 1- Lookup/search/find by index = O(1)      
 2- Insert Item in static array: O(n) because firs the copy elements of the previous array into new array, then insert a new element        
 3- Delete Item in last: It will take O(1) but it is best case scenario, the worst case scenario is it can be in the start of the array, then we have to remove it and then shift all the item one item back to fill the first space, its O(n)          
