@@ -1,0 +1,159 @@
+Big O notation
+
+#### Internet definition:
+Big O notation is a mathematical notation that describes the limiting behavior of a function when the argument tends towards a particular value or infinity.
+
+
+#### Real Definition:
+    We use Big O to describe the performance of an algorithm and it helps us determine the given algorithm is scalable or not, which means if 
+is this algorithm scales well as the input grows really large.
+
+If the code executes quickly on the computer it does not mean it will perform well when you give a large dataset.
+
+that's why we use big O notation to describe the performance of algorithm
+
+but what's the link with data structure?
+
+actually certain operations are less or more costly depending on what  data structures we use.
+
+#### forexample:
+accessing the element in the array using index number is super fast where as array has fixed length
+but if we add or remove elements it needs to resize which is costly as the size of our input grows very large.
+
+then we can use linked list, they can grow and shrink very quickly, but accessing the element in linked list is very slow.
+
+
+  - - - - - - 
+
+in for loop, we do loop through all the elements so it is linear which is O(n)
+
+
+#### O(n^2)
+
+example 1:
+
+function add(item) {   
+for(let i =0; i < item.length; i++){    // O(n)
+  for(let j =0; j < i; j++{             // O(n)
+
+       console.log(item[i])
+}}
+}
+
+result = O(n * n) -> O(n^2)
+
+
+in nested loop, we have to loop through all the elements till the first loop completes, so it is O (n * n) -> O(n ^ 2) (n-square) --> this algorithm runs in quadratic time. 
+the algorithm runs in O(n-square) gets slower and slower as compare to O(n). if the array size is 50 then it will not create the difference but when the input grows larger and larger the O(n^2) will slower then O(n)
+ 
+example 2:
+
+
+function add(item) {  
+ for(let i =0; i < item.length; i++){    // O(n)     
+       console.log(item[i])
+}
+ 
+for(let i =0; i < item.length; i++){    // O(n)
+  for(let j =0; j < i; j++{             // O(n)
+
+       console.log(item[i])
+}}
+}
+
+result = O(n + n^2) -> 
+
+here to simplify this, we have to see which number is greater that is n^2 which grows alot faster. because we need a approximation value not the exact value, so we can drop the single n so the result will be consider as O(n^2)
+
+result = O(n + n^2) -> O(n^2)
+
+
+example 3 with O(n^3) O(n-cube)::
+
+function add(item) {  
+
+ 
+for(let i =0; i < item.length; i++){    // O(n)
+  for(let j =0; j < i; j++{             // O(n)
+
+ for(let k =0; k < j; k++){    // O(n)     
+       console.log(item[i])
+}
+}}
+}
+
+result = O (n * n * n) -> O(n^3)
+
+this algorithm gets more slower than the algorithm with O(n^2)
+
+ - -- - - - - - - - 
+
+
+#### O(log n):
+
+logarithmic growth,
+
+compare this with linear growth, linear grows at the same rate but logarithmic curve slows down at some point.
+
+so the algorithm that runs in log n time is more efficient and scalable than the algorithm which runs in linear or quadratic time.
+
+example:
+
+array of 1 to 10
+
+going through each item in array from 1 to 10 takes the linear time. in the worst case, the number we are looking may be in the end of the array, so we need to inspect every item in the array to find the target number. the more items we have the more time it will take. 
+
+
+so the runtime if this algorithm increases linearly and in direct proportion with the size of our array. Now, we have another searching  out for them called binary search, and this algorithm runs in logarithmic time. Its much faster then the linear search. Assuming that our array is sorted, we start off by looking at the middle item. If this item smaller or greater than the value we are looking for? Its smaller so our target number, in this case 10 must be in the right partition of this array.  now we dont need to search on left part. No w in the right part again, we look at the middle item, is it smaller or greater then the target value? its smaller so again, we ignore the tiem on the left and focus on the items on the right.  
+
+so in every step, we are narrowing our search by half. with this algorithm, if we have one million items in his array, we can find a target item with a maximum of 19 comparisons. 
+- we dont have to inspect every item in our array, this is logarithmic time in action, we have logarithmic growth in algorithms where you reduce our work by half in every step. we can see these in trees and graphs. 
+
+ 
+An algorithm with logarithmic time, is more scalable than one with linear time.
+
+  - - - - - - - 
+
+#### O(2^n )
+Exponential Growth:
+
+
+Exponential growth is opposite of logarithmic growth, so the logarithm curve slows that as the input size grows. whereas exponential curve grows faster and faster. 
+An algorithm who runs in exponential time is not scalable at all. they will become very slow very soon. 
+
+
+ - - - - - - - - 
+
+
+### Space Complexity:
+
+we want our algorithms to be super fast and scalable, and take minimum amount of memory. But unfortunately, that hardly if ever happens.  most of the time, you have to do a trade off between saving time and saving space. There are times when we have more space, sp we can use that to optimize an algorithm to make it faster and more scalable. But there are also times, where you have limited space, like when we build app for a mobile device. when very few people going to use our application not a million user. 
+
+so we need to see how much space an algorithm requires, and that where we use big O notation. 
+
+public class Main {
+  public void greet (String[] names) {
+  // 0(1) space 
+  for (int i = 0; i < names. length; i++)
+  System.out.println ("Hi " + names [i]) ;
+}
+}
+
+this i = 0 will take O(1) space
+becuase we are getting the space for i once, everytime when we are looping, we are not gettign new space, we are just changing the value of that i. 
+
+but if the code is this:
+
+public class Main {
+  public void greet (String[] names) {
+  // 0(n) space 
+ String[] copy = new String[names.length]
+
+  for (int i = 0; i < names. length; i++)
+  System.out.println ("Hi " + names [i]) ;
+}
+}
+
+then this string array, the lenght of this copy array is equal to the length of our input, so if our input array has a thousand items, this array will have a thousand items,  the space complexity of this method is O(n). the more items we have in our input array, the more sapce our method is going to take. This is in direct proportion to the size of our input array.
+
+When we talk about space complexity, we look at the additional apce that we should allocate relative to the size of input. We always have the input of size n, so we dont count it, we just analyze how much extra space  we need to allocate for this algorithm. 
